@@ -1,0 +1,80 @@
+<!--
+  Vaishnavi Gaushala — Navbar Partial
+  Injected via loadPartial() into <header data-partial="navbar"></header>.
+  Pages set aria-current="page" on the active link via app.js.
+-->
+<nav class="vai-nav" aria-label="Main navigation" data-vai-nav>
+  <div class="container-vai vai-nav__inner">
+
+    <!-- Brand — logo only; the JPEG already contains the wordmark -->
+    <a class="vai-nav__brand" href="/index.html" aria-label="Vaishnavi Gau Seva Gausansthan — Home">
+      <img src="/assets/img/vaishnavilogo.jpeg" alt="Vaishnavi Gau Seva Gausansthan" width="60" height="60" class="logo-img logo-img--blend vai-nav__brand-img" />
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="vai-nav__links" role="list">
+      <li><a href="/index.html"          data-nav="home">Home</a></li>
+      <li><a href="/products.html"       data-nav="products">Shop</a></li>
+      <li><a href="/services.html"       data-nav="services">Services</a></li>
+      <li><a href="/about.html"          data-nav="about">Our Story</a></li>
+      <li><a href="/contact.html"        data-nav="contact">Contact</a></li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="vai-nav__actions">
+      <a href="/login.html" class="btn-icon" aria-label="Account">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+        </svg>
+      </a>
+      <a href="/cart.html" class="btn-icon vai-nav__cart" aria-label="Cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 3h2l2.6 12.6a2 2 0 0 0 2 1.4h8.8a2 2 0 0 0 2-1.5L22 7H6"/>
+          <circle cx="9" cy="20" r="1.5"/>
+          <circle cx="18" cy="20" r="1.5"/>
+        </svg>
+        <span class="vai-nav__cart-count" data-cart-count>0</span>
+      </a>
+      <button class="vai-nav__toggle btn-icon"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#vaiMobileNav"
+              aria-controls="vaiMobileNav"
+              aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile offcanvas drawer -->
+<div class="offcanvas offcanvas-end vai-offcanvas" tabindex="-1" id="vaiMobileNav" aria-labelledby="vaiMobileNavLabel">
+  <div class="offcanvas-header">
+    <a class="vai-nav__brand" href="/index.html">
+      <img src="/assets/img/vaishnavilogo.jpeg" alt="Vaishnavi Gau Seva Gausansthan" width="52" height="52" class="logo-img logo-img--blend vai-nav__brand-img" />
+    </a>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul role="list">
+      <li><a href="/index.html"    data-nav="home">Home</a></li>
+      <li><a href="/products.html" data-nav="products">Shop</a></li>
+      <li><a href="/services.html" data-nav="services">Services</a></li>
+      <li><a href="/about.html"    data-nav="about">Our Story</a></li>
+      <li><a href="/contact.html"  data-nav="contact">Contact</a></li>
+      <li><a href="/login.html"    data-nav="login">Login / Register</a></li>
+    </ul>
+    <hr class="vai-offcanvas__divider">
+    <a href="https://wa.me/919800000000"
+       class="btn-vaishnavi-gold btn-sm vai-offcanvas__wa"
+       target="_blank"
+       rel="noopener">
+      WhatsApp Us
+    </a>
+  </div>
+</div>

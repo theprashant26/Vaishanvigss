@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Account — Vaishnavi Gaushala</title>
+  <meta name="description" content="Manage your orders, subscriptions, addresses and account settings at Vaishnavi Gaushala." />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#7A1F1F" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=DM+Sans:wght@400;500;600;700&family=Tiro+Devanagari+Hindi&display=swap" />
+
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=3" />
+  <link rel="stylesheet" href="/assets/css/global.css?v=3" />
+  <link rel="stylesheet" href="/assets/css/components.css?v=3" />
+  <link rel="stylesheet" href="/assets/css/profile.css?v=3" />
+
+  <link rel="icon" type="image/jpeg" href="/assets/img/vaishnavilogo.jpeg" />
+</head>
+<body data-page="profile">
+
+  <header data-partial="navbar"></header>
+
+  <main>
+
+    <section class="profile container-vai" aria-labelledby="profile-h">
+
+      <nav class="breadcrumb-vai" aria-label="Breadcrumb">
+        <a href="/index.html">Home</a>
+        <span class="sep">/</span>
+        <span aria-current="page">My account</span>
+      </nav>
+
+      <div class="profile__header">
+        <h1 id="profile-h">
+          <em>Welcome back,</em>
+          <span data-user-name>Anjali</span>
+        </h1>
+        <p>Manage your orders, subscriptions, addresses and account preferences here.</p>
+      </div>
+
+      <div class="profile__grid">
+
+        <!-- Sidebar nav -->
+        <aside class="profile-nav" aria-label="Account navigation">
+          <ul class="profile-nav__list" role="list">
+            <li><a href="#dashboard"      data-view="dashboard"     class="is-active">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              Dashboard
+            </a></li>
+            <li><a href="#orders"         data-view="orders">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              Orders
+            </a></li>
+            <li><a href="#subscriptions"  data-view="subscriptions">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7l3 3"/><path d="M21 4v6h-6"/><path d="M21 12a9 9 0 0 1-15 6.7l-3-3"/><path d="M3 20v-6h6"/></svg>
+              Subscriptions
+            </a></li>
+            <li><a href="#addresses"      data-view="addresses">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Addresses
+            </a></li>
+            <li><a href="#wishlist"       data-view="wishlist">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 8.5C20 14 12 20 12 20S4 14 4 8.5A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 8 2.5z"/></svg>
+              Wishlist
+            </a></li>
+            <li><a href="#settings"       data-view="settings">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              Settings
+            </a></li>
+            <li><a href="#" class="profile-nav__logout" data-logout>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+              Sign out
+            </a></li>
+          </ul>
+        </aside>
+
+        <!-- View content -->
+        <div>
+
+          <!-- =============== DASHBOARD =============== -->
+          <section class="profile-view is-active" data-view="dashboard" aria-label="Dashboard">
+
+            <div class="dash-stats">
+              <div class="dash-stat">
+                <div class="dash-stat__label">Total orders</div>
+                <div class="dash-stat__value">12</div>
+                <div class="dash-stat__sub"><strong>+ 3</strong> in the last month</div>
+              </div>
+              <div class="dash-stat">
+                <div class="dash-stat__label">Subscription savings</div>
+                <div class="dash-stat__value">₹3,612</div>
+                <div class="dash-stat__sub">since January 2026</div>
+              </div>
+              <div class="dash-stat">
+                <div class="dash-stat__label">Cows you support</div>
+                <div class="dash-stat__value">35</div>
+                <div class="dash-stat__sub">every order, every day</div>
+              </div>
+            </div>
+
+            <article class="active-sub">
+              <div>
+                <span class="active-sub__tag">Active subscription</span>
+                <h3 class="active-sub__name">Daily A2 Milk · 1 L</h3>
+                <p class="active-sub__next">Next delivery: <strong>Tomorrow, 6:30 am</strong></p>
+                <div class="active-sub__meta">
+                  <div class="active-sub__meta-item">
+                    <span>Renewal</span>
+                    <strong>15 Jun 2026</strong>
+                  </div>
+                  <div class="active-sub__meta-item">
+                    <span>This month</span>
+                    <strong>₹3,299</strong>
+                  </div>
+                  <div class="active-sub__meta-item">
+                    <span>Saved</span>
+                    <strong>₹301</strong>
+                  </div>
+                </div>
+              </div>
+              <div class="active-sub__actions">
+                <a href="#subscriptions" data-view="subscriptions" class="btn-vaishnavi-gold btn-sm">Manage</a>
+                <a href="#" class="btn-vaishnavi-ghost btn-sm btn-vaishnavi-ghost--on-dark">Skip next</a>
+              </div>
+            </article>
+
+            <div class="view-card">
+              <div class="dash-recent__head">
+                <h3>Recent orders</h3>
+                <a href="#orders" data-view="orders">View all →</a>
+              </div>
+              <div class="dash-recent" data-dash-recent>
+                <!-- Rendered by profile.js -->
+              </div>
+            </div>
+
+          </section>
+
+          <!-- =============== ORDERS =============== -->
+          <section class="profile-view" data-view="orders" aria-label="Orders">
+            <div class="view-card">
+              <h2>Your orders</h2>
+              <p class="view-card__lead">Twelve orders since you joined, four cows fed this month.</p>
+              <div class="dash-recent" data-orders-list>
+                <!-- Rendered by profile.js -->
+              </div>
+            </div>
+          </section>
+
+          <!-- =============== SUBSCRIPTIONS =============== -->
+          <section class="profile-view" data-view="subscriptions" aria-label="Subscriptions">
+            <div class="view-card">
+              <h2>Your subscriptions</h2>
+              <p class="view-card__lead">Pause, skip or cancel any time. No contracts.</p>
+              <div data-subs-list>
+                <!-- Rendered by profile.js -->
+              </div>
+            </div>
+          </section>
+
+          <!-- =============== ADDRESSES =============== -->
+          <section class="profile-view" data-view="addresses" aria-label="Addresses">
+            <div class="view-card">
+              <h2>Saved addresses</h2>
+              <p class="view-card__lead">Add up to five addresses for faster checkout.</p>
+              <div class="addr-grid" data-addr-list>
+                <!-- Rendered by profile.js -->
+              </div>
+            </div>
+          </section>
+
+          <!-- =============== WISHLIST =============== -->
+          <section class="profile-view" data-view="wishlist" aria-label="Wishlist">
+            <div class="view-card">
+              <h2>Your wishlist</h2>
+              <p class="view-card__lead">Items you've saved. Move them to your cart any time.</p>
+              <div class="wish-grid" data-wish-grid>
+                <!-- Rendered by profile.js -->
+              </div>
+            </div>
+          </section>
+
+          <!-- =============== SETTINGS =============== -->
+          <section class="profile-view" data-view="settings" aria-label="Settings">
+            <div class="view-card">
+              <h2>Account settings</h2>
+              <p class="view-card__lead">Manage how we reach you and what's on file.</p>
+
+              <!-- Account info -->
+              <form class="settings-section" data-settings-form="account">
+                <h3>Account info</h3>
+                <p class="settings-section__lead">Used for delivery contact and order confirmations.</p>
+                <div class="settings-row">
+                  <div>
+                    <label for="s-name" class="form-label-vai">Full name</label>
+                    <input id="s-name" class="form-control-vai" type="text" data-settings-name />
+                  </div>
+                  <div>
+                    <label for="s-phone" class="form-label-vai">Phone</label>
+                    <input id="s-phone" class="form-control-vai" type="tel" data-settings-phone />
+                  </div>
+                  <div>
+                    <label for="s-email" class="form-label-vai">Email</label>
+                    <input id="s-email" class="form-control-vai" type="email" data-settings-email />
+                  </div>
+                </div>
+                <button type="submit" class="btn-vaishnavi-primary btn-sm">Save changes</button>
+              </form>
+
+              <!-- Password -->
+              <form class="settings-section" data-settings-form="password">
+                <h3>Change password</h3>
+                <p class="settings-section__lead">Choose something memorable but not obvious.</p>
+                <div class="settings-row">
+                  <div>
+                    <label for="s-cur" class="form-label-vai">Current password</label>
+                    <input id="s-cur" class="form-control-vai" type="password" autocomplete="current-password" />
+                  </div>
+                  <div>
+                    <label for="s-new" class="form-label-vai">New password</label>
+                    <input id="s-new" class="form-control-vai" type="password" autocomplete="new-password" />
+                  </div>
+                </div>
+                <button type="submit" class="btn-vaishnavi-primary btn-sm">Update password</button>
+              </form>
+
+              <!-- Notifications -->
+              <div class="settings-section">
+                <h3>Notifications</h3>
+                <p class="settings-section__lead">Tell us how you'd like to hear from us.</p>
+
+                <label class="notif-row filter__switch">
+                  <div class="notif-row__label">
+                    <strong>Order updates</strong>
+                    <span>When your order is packed, dispatched, and delivered.</span>
+                  </div>
+                  <input type="checkbox" checked />
+                </label>
+
+                <label class="notif-row filter__switch">
+                  <div class="notif-row__label">
+                    <strong>Subscription reminders</strong>
+                    <span>Before each delivery, in case you want to skip.</span>
+                  </div>
+                  <input type="checkbox" checked />
+                </label>
+
+                <label class="notif-row filter__switch">
+                  <div class="notif-row__label">
+                    <strong>Cow updates</strong>
+                    <span>Monthly photos and health reports from the gaushala.</span>
+                  </div>
+                  <input type="checkbox" checked />
+                </label>
+
+                <label class="notif-row filter__switch">
+                  <div class="notif-row__label">
+                    <strong>Newsletter &amp; offers</strong>
+                    <span>One short letter a month. Promise.</span>
+                  </div>
+                  <input type="checkbox" />
+                </label>
+
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER (INLINED — DO NOT EXTRACT TO PARTIAL UNTIL VERIFIED) ================= -->
+<footer class="vai-footer">
+
+  <!-- Promise strip -->
+  <div class="vai-footer__promise">
+    <div class="container">
+      <div class="row g-4 text-center text-md-start align-items-center">
+        <div class="col-6 col-md-3 vai-promise-item">
+          <div class="vai-promise-icon">🐄</div>
+          <div class="vai-promise-text"><strong>A2 Desi Cows</strong><span>Gir · Sahiwal · Tharparkar</span></div>
+        </div>
+        <div class="col-6 col-md-3 vai-promise-item">
+          <div class="vai-promise-icon">🌾</div>
+          <div class="vai-promise-text"><strong>Hand-churned</strong><span>Traditional bilona method</span></div>
+        </div>
+        <div class="col-6 col-md-3 vai-promise-item">
+          <div class="vai-promise-icon">🚚</div>
+          <div class="vai-promise-text"><strong>Fresh delivery</strong><span>NCR daily · Pan-India weekly</span></div>
+        </div>
+        <div class="col-6 col-md-3 vai-promise-item">
+          <div class="vai-promise-icon">🙏</div>
+          <div class="vai-promise-text"><strong>Funds 35+ cows</strong><span>Every purchase = seva</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="vai-footer__newsletter">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h3 class="vai-newsletter-title">Stories from the gaushala, in your inbox.</h3>
+          <p class="vai-newsletter-sub">Recipes, cow-care updates, festival offers. No spam — twice a month.</p>
+        </div>
+        <div class="col-lg-6">
+          <form class="vai-newsletter-form d-flex flex-column flex-sm-row gap-2">
+            <input type="email" class="form-control vai-input" placeholder="your@email.com" aria-label="Email">
+            <button type="button" class="btn vai-btn-gold">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main grid -->
+  <div class="vai-footer__main">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+
+        <!-- Brand column -->
+        <div class="col-12 col-lg-4 vai-footer__brand-col">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="/assets/img/vaishnavilogo.jpeg" alt="Vaishnavi Gau Seva Gausansthan" class="vai-footer-logo">
+            <div>
+              <div class="vai-brand-name">Vaishnavi</div>
+              <div class="vai-brand-sub">गऊ सेवा गौसंस्थान</div>
+            </div>
+          </div>
+          <p class="vai-footer-desc">A sanctuary for 35+ indigenous cows. Every product you buy funds their care, fodder, and shelter. From our gaushala to your home — pure, traditional, sacred.</p>
+          <div class="vai-footer-chips">
+            <span class="vai-chip">Est. 2013</span>
+            <span class="vai-chip">A2 Desi Only</span>
+            <span class="vai-chip">35+ Cows</span>
+            <span class="vai-chip">Pan-India</span>
+          </div>
+          <div class="vai-footer-social mt-3">
+            <a href="#" aria-label="Instagram" class="vai-social-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.5-1s-.8-.9-1-1.5c-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 1-1.5s.9-.8 1.5-1c.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8s-.6.8-.8 1.3c-.1.4-.3 1-.4 2.1C2.6 8.5 2.6 8.9 2.6 12s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3s.8.6 1.3.8c.4.1 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8s.6-.8.8-1.3c.1-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3s-.8-.6-1.3-.8c-.4-.1-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4zm5.2-2.1a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="vai-social-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="vai-social-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+            </a>
+            <a href="#" aria-label="WhatsApp" class="vai-social-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.2.8.9-3.1-.2-.3a8.2 8.2 0 1 1 7.2 4z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Shop -->
+        <div class="col-6 col-md-3 col-lg-2 vai-footer__col">
+          <h4 class="vai-footer-heading">Shop</h4>
+          <ul class="vai-footer-links">
+            <li><a href="/products.html">All Products</a></li>
+            <li><a href="/products.html?category=milk-dairy">A2 Milk</a></li>
+            <li><a href="/product-detail.html?slug=a2-cow-ghee">Bilona Ghee</a></li>
+            <li><a href="/product-detail.html?slug=fresh-buttermilk">Buttermilk</a></li>
+            <li><a href="/products.html?category=traditional-snacks">Snacks</a></li>
+            <li><a href="/services.html#subscriptions">Subscriptions</a></li>
+          </ul>
+        </div>
+
+        <!-- Gaushala -->
+        <div class="col-6 col-md-3 col-lg-2 vai-footer__col">
+          <h4 class="vai-footer-heading">Our Gaushala</h4>
+          <ul class="vai-footer-links">
+            <li><a href="/about.html">Our Story</a></li>
+            <li><a href="/about.html#cows">Meet the Cows</a></li>
+            <li><a href="/about.html#breeds">Our Breeds</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/services.html#adoption">Cow Adoption</a></li>
+            <li><a href="/services.html#visit">Visit Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Help -->
+        <div class="col-6 col-md-3 col-lg-2 vai-footer__col">
+          <h4 class="vai-footer-heading">Help</h4>
+          <ul class="vai-footer-links">
+            <li><a href="#">Shipping &amp; Delivery</a></li>
+            <li><a href="#">Returns &amp; Refunds</a></li>
+            <li><a href="#">Subscription FAQ</a></li>
+            <li><a href="/profile.html#orders">Track Order</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/services.html#wholesale">Bulk / Wholesale</a></li>
+          </ul>
+        </div>
+
+        <!-- Reach Us -->
+        <div class="col-6 col-md-3 col-lg-2 vai-footer__col">
+          <h4 class="vai-footer-heading">Reach Us</h4>
+          <ul class="vai-footer-links vai-footer-contact">
+            <li>📍 Vaishnavi Gaushala,<br><!-- PLACEHOLDER -->[Address line], Delhi NCR</li>
+            <li>📞 <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li>
+            <li>✉️ <a href="mailto:seva@vaishnavigaushala.com">seva@vaishnavigaushala.com</a></li>
+            <li>🕒 Mon–Sun · 6 AM – 8 PM</li>
+            <li><a href="https://wa.me/91XXXXXXXXXX" class="vai-whatsapp-pill">Chat on WhatsApp</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom strip -->
+  <div class="vai-footer__bottom">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <small>© 2026 Vaishnavi Gau Seva Gausansthan. All rights reserved.</small>
+      <small><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Refund Policy</a></small>
+    </div>
+  </div>
+
+</footer>
+<!-- ================= END FOOTER ================= -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/animations.js"></script>
+  <script src="/assets/js/profile.js"></script>
+</body>
+</html>
