@@ -116,7 +116,7 @@
         <ul class="plan-card__items" role="list">
           ${plan.items.map(i => `<li>${check}<span>${esc(i)}</span></li>`).join('')}
         </ul>
-        <a class="btn-vaishnavi-primary btn-sm plan-card__cta" href="/register.html?plan=${esc(plan.id)}">Subscribe</a>
+        <a class="btn-vaishnavi-primary btn-sm plan-card__cta" href="register.html?plan=${esc(plan.id)}">Subscribe</a>
       </article>
     `;
   }
@@ -161,7 +161,7 @@
   async function boot() {
     renderNonSubServices();
     try {
-      const data = await fetchJSON('/assets/data/subscriptions.json');
+      const data = await fetchJSON('assets/data/subscriptions.json');
       renderSubscriptions(data);
     } catch (err) {
       console.error('[services] subscriptions load failed', err);

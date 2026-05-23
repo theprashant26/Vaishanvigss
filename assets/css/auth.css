@@ -20,8 +20,8 @@
   position: absolute;
   inset: 0;
   background:
-    url("/assets/svg/paisley-watermark.svg") left -100px top 50% / 500px no-repeat,
-    url("/assets/svg/paisley-watermark.svg") right -100px bottom 10% / 400px no-repeat;
+    url("assets/svg/paisley-watermark.svg") left -100px top 50% / 500px no-repeat,
+    url("assets/svg/paisley-watermark.svg") right -100px bottom 10% / 400px no-repeat;
   opacity: 0.05;
   z-index: -1;
   pointer-events: none;

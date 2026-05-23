@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="cart-line__main">
-          <a class="cart-line__name" href="/product-detail.html?id=${encodeURIComponent(l.id)}">${esc(l.name)}</a>
+          <a class="cart-line__name" href="product-detail.html?id=${encodeURIComponent(l.id)}">${esc(l.name)}</a>
           ${l.size ? `<span class="cart-line__meta">${esc(l.size)}</span>` : ''}
         </div>
         <div class="cart-line__price">${fmt(l.price)}</div>

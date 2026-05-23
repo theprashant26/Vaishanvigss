@@ -218,7 +218,7 @@
 
     let products = [];
     try {
-      const r = await fetch('/assets/data/products.json', { cache: 'no-cache' });
+      const r = await fetch('assets/data/products.json', { cache: 'no-cache' });
       products = await r.json();
     } catch {}
 
@@ -230,7 +230,7 @@
       host.innerHTML = `
         <div class="profile-empty">
           <p>Your wishlist is empty. Save items you like for later.</p>
-          <a href="/products.html" class="btn-vaishnavi-primary">Browse shop</a>
+          <a href="products.html" class="btn-vaishnavi-primary">Browse shop</a>
         </div>
       `;
       return;
@@ -247,7 +247,7 @@
         </div>
         <div class="product-card__body">
           <span class="product-card__cat">${esc(p.category.replace('-', ' & '))}</span>
-          <a class="product-card__name" href="/product-detail.html?id=${encodeURIComponent(p.id)}">${esc(p.name)}</a>
+          <a class="product-card__name" href="product-detail.html?id=${encodeURIComponent(p.id)}">${esc(p.name)}</a>
           <span class="product-card__weight">${esc(p.weight)}</span>
           <div class="product-card__price-row">
             <span class="product-card__price">${fmt(p.price)}</span>

@@ -96,8 +96,8 @@
   async function boot() {
     try {
       const [breeds, cows] = await Promise.all([
-        fetchJSON('/assets/data/breeds.json'),
-        fetchJSON('/assets/data/cows.json'),
+        fetchJSON('assets/data/breeds.json'),
+        fetchJSON('assets/data/cows.json'),
       ]);
       renderBreeds(breeds);
       renderCows(cows);

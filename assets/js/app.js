@@ -36,7 +36,7 @@
     const host = document.querySelector(`[data-partial="${name}"]`);
     if (!host) return;
     try {
-      const res = await fetch(`/components/${name}.html`, { cache: 'no-cache' });
+      const res = await fetch(`components/${name}.html`, { cache: 'no-cache' });
       if (!res.ok) throw new Error(`Partial ${name} returned ${res.status}`);
       host.innerHTML = await res.text();
       if (typeof afterInject === 'function') afterInject(host);
@@ -248,7 +248,7 @@
     splash.className = 'vai-splash';
     splash.setAttribute('aria-hidden', 'true');
     splash.innerHTML = `
-      <img class="vai-splash__mark logo-img logo-img--blend" src="/assets/img/vaishnavilogo.jpeg" alt="Vaishnavi Gau Seva Gausansthan" width="96" height="96" />
+      <img class="vai-splash__mark logo-img logo-img--blend" src="assets/img/vaishnavilogo.jpeg" alt="Vaishnavi Gau Seva Gausansthan" width="96" height="96" />
       <div class="vai-splash__wordmark">Vaishnavi</div>
       <div class="vai-splash__deva">गऊ सेवा</div>
     `;

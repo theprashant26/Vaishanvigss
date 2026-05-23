@@ -35,7 +35,7 @@
       const count = cat.productCount ? `${cat.productCount} products · ` : '';
       return `
         <a class="cat-card cat-card--${escape(cat.id)}"
-           href="/products.html?cat=${encodeURIComponent(cat.id)}"
+           href="products.html?cat=${encodeURIComponent(cat.id)}"
            aria-label="Shop ${escape(cat.name)}">
           <div class="cat-card__bg" aria-hidden="true">
             <!-- TODO: replace gradient with <img loading="lazy" src="${escape(cat.image)}" alt=""> -->
@@ -86,7 +86,7 @@
         </div>
         <div class="product-card__body">
           <span class="product-card__cat">${escape(catName(p.category))}</span>
-          <a class="product-card__name" href="/product-detail.html?id=${encodeURIComponent(p.id)}">${escape(p.name)}</a>
+          <a class="product-card__name" href="product-detail.html?id=${encodeURIComponent(p.id)}">${escape(p.name)}</a>
           <span class="product-card__weight">${escape(p.weight || '')}</span>
           <div class="product-card__price-row">
             <span class="product-card__price">
@@ -200,9 +200,9 @@
   async function boot() {
     try {
       const [cats, products, testis] = await Promise.all([
-        fetchJSON('/assets/data/categories.json'),
-        fetchJSON('/assets/data/products.json'),
-        fetchJSON('/assets/data/testimonials.json'),
+        fetchJSON('assets/data/categories.json'),
+        fetchJSON('assets/data/products.json'),
+        fetchJSON('assets/data/testimonials.json'),
       ]);
 
       // Build category-name index for product cards

@@ -36,11 +36,11 @@
     const host = document.querySelector('[data-breadcrumb]');
     if (!host) return;
     host.innerHTML = `
-      <a href="/index.html">Home</a>
+      <a href="index.html">Home</a>
       <span class="sep">/</span>
-      <a href="/products.html">Shop</a>
+      <a href="products.html">Shop</a>
       <span class="sep">/</span>
-      <a href="/products.html?cat=${encodeURIComponent(p.category)}">${esc(c ? c.name : p.category)}</a>
+      <a href="products.html?cat=${encodeURIComponent(p.category)}">${esc(c ? c.name : p.category)}</a>
       <span class="sep">/</span>
       <span aria-current="page">${esc(p.name)}</span>
     `;
@@ -201,7 +201,7 @@
         </div>
         <div class="product-card__body">
           <span class="product-card__cat">${esc((state.categories.find(c => c.id === p.category) || {}).name || p.category)}</span>
-          <a class="product-card__name" href="/product-detail.html?id=${encodeURIComponent(p.id)}">${esc(p.name)}</a>
+          <a class="product-card__name" href="product-detail.html?id=${encodeURIComponent(p.id)}">${esc(p.name)}</a>
           <span class="product-card__weight">${esc(p.weight)}</span>
           <div class="product-card__price-row">
             <span class="product-card__price">${fmt(p.price)}</span>
@@ -398,8 +398,8 @@
     let products, categories;
     try {
       [products, categories] = await Promise.all([
-        fetchJSON('/assets/data/products.json'),
-        fetchJSON('/assets/data/categories.json'),
+        fetchJSON('assets/data/products.json'),
+        fetchJSON('assets/data/categories.json'),
       ]);
     } catch (err) {
       console.error('[pdp] data load failed', err);

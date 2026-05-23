@@ -17,7 +17,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/assets/svg/paisley-watermark.svg") right -100px center / 500px no-repeat;
+  background: url("assets/svg/paisley-watermark.svg") right -100px center / 500px no-repeat;
   opacity: 0.05;
   z-index: -1;
 }

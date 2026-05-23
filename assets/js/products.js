@@ -185,7 +185,7 @@
         </div>
         <div class="product-card__body">
           <span class="product-card__cat">${esc(cat ? cat.name : p.category)}</span>
-          <a class="product-card__name" href="/product-detail.html?id=${encodeURIComponent(p.id)}">${esc(p.name)}</a>
+          <a class="product-card__name" href="product-detail.html?id=${encodeURIComponent(p.id)}">${esc(p.name)}</a>
           <span class="product-card__weight">${esc(p.weight)}</span>
           <div class="product-card__price-row">
             <span class="product-card__price">
@@ -349,8 +349,8 @@
     readURL();
     try {
       const [products, categories] = await Promise.all([
-        fetchJSON('/assets/data/products.json'),
-        fetchJSON('/assets/data/categories.json'),
+        fetchJSON('assets/data/products.json'),
+        fetchJSON('assets/data/categories.json'),
       ]);
       state.products = products;
       state.categories = categories;
